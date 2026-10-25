@@ -245,6 +245,7 @@ the program as first elements of the list. Portable across implementations."
   #+clozure   ccl:*command-line-argument-list*
   #+cmu       extensions:*command-line-words*
   #+ecl       (ext:command-args)
+  #+egcl      (egcl-ext:raw-command-line-arguments)
   #+gcl       si:*command-args*
   #+lispworks system:*line-arguments-list*
   #+sbcl      sb-ext:*posix-argv*)
@@ -606,6 +607,7 @@ The output goes to STREAM."
   #+cmu       (unix:unix-exit status)
   #+ccl       (ccl:quit status)
   #+ecl       (ext:quit status)
+  #+egcl      (uiop:quit status)
   #+clisp     (ext:exit status)
   #+abcl      (extensions:exit :status status)
   #+allegro   (excl:exit status :quiet t)

@@ -30,6 +30,7 @@
   :description  "minimalistic parser of command line arguments"
   :author       "Mark Karpov"
   :license      "MIT"
+  :depends-on   (#+egcl :uiop)
   :components   ((:file "unix-opts")))
 
 
